@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="container-fluid vh-100 bg-dark text-white d-flex flex-column pt-3 pb-3 gap-3 align-items-center overflow-auto">
-        <?php if (isset($_SESSION['mensagem'])) : ?>
-            <div class="w-50 alert alert-success alert-dismissible fade show m-0" role="alert">
+        <?php if (isset($_SESSION['tipoMensagem'], $_SESSION['mensagem'])) : ?>
+            <div class="w-50 alert alert-<?= $_SESSION['tipoMensagem'] ?> alert-dismissible fade show m-0" role="alert">
                 <?= $_SESSION['mensagem']; ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
